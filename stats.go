@@ -2,17 +2,15 @@ package memstats
 
 import (
 	"github.com/dustin/go-humanize"
-	. "github.com/tj/go-debug"
+	"github.com/tj/go-debug"
 	"runtime"
 	"strconv"
 	"time"
 )
 
-var debug = Debug("bimg")
-
 // Print Go memory and garbage collector stats. Useful for debugging
 func PrintMemoryStats() {
-	log := Debug("memory")
+	log := debug.Debug("memory")
 	mem := MemStats()
 
 	log("\u001b[33m---- Memory Dump Stats ----\u001b[39m")
